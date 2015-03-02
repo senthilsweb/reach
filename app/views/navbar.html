@@ -1,0 +1,57 @@
+﻿<nav class="navbar navbar-default navbar-fixed-top" ng-controller="navBarController" ng-show="visible">
+    <div class="container">
+        <div class="navbar-header">
+            <!--<a href="/#/home" class="navbar-brand">Reach.Angular</a>-->
+            <img src="app/img/logo.png" style="padding-top:5px;padding-right:250px;">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li ng-class="{'active':isActive('/dashboard')}">
+                    <a href="#/dashboard">
+                        <i class="fa fa-tachometer"></i>&nbsp;Dashboard
+                    </a>
+                </li>
+                <li ng-class="{'active':isActive('/emr')}">
+                    <a href="javascript:alert('This opens EMR in a new Window')">
+                        <i class="fa fa-stethoscope"></i>&nbsp;EMR
+                    </a>
+                </li>
+                <li ng-class="{'active':isActive('/helpdesk')}">
+                    <a href="#/helpdesk"><i class="fa fa-headphones"></i>&nbsp;Helpdesk</a>
+                </li>
+                <li ng-class="{'active':isActive('/upload')}">
+                    <a href="#/upload">
+                        <i class="fa fa-upload"></i>&nbsp;Upload
+                        <span class="badge badge-danger vm-badge-for-menu vm-bg-transparent vm-red">46</span>
+                    </a>
+                </li>
+                <li ng-class="{'active':isActive('/reports')}">
+                    <a href="Javascript:void();" data-toggle="dropdown"><i class="fa fa-lock"></i>&nbsp;Admin <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="download">
+                        <li ng-class="{'active':isActive('/reports')}"><a href="#/admin/reports">Reports</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation" class="dropdown-header">Master Data</li>
+                        <li><a href="#/admin/ehc">eHC</a></li>
+                        <li><a href="#/admin/hub">Hub</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/login" ng-show="!visible">Login</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="Javascript:void();"><i class="fa fa-user"></i>&nbsp;John Smith <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="download">
+                        <li><a href="#/dashboard">My Profile</a></li>
+                        <li><a href="#/dashboard">Chnage Password</a></li>
+                        <li><a href="#/login">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
