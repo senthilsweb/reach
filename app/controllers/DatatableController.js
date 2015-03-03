@@ -3,7 +3,9 @@ reachApp.controller('datatableController', function (DTOptionsBuilder, DTColumnB
 
     var vm = this;
     vm.dtOptions = DTOptionsBuilder
-        .fromSource('data/data.json')       
+        .fromSource('data/data.js')
+        .withDisplayLength(5)
+        //.withDOM('<lf<t>ip>')
         // Add Bootstrap compatibility
         .withBootstrap()
        .withBootstrapOptions({
@@ -21,7 +23,7 @@ reachApp.controller('datatableController', function (DTOptionsBuilder, DTColumnB
                }
            }
        })
-      
+    console.log(vm.dtOptions)
     vm.dtColumns = [
         DTColumnBuilder.newColumn('id').withTitle('ID').withClass('text-danger'),
         DTColumnBuilder.newColumn('firstName').withTitle('First name'),
