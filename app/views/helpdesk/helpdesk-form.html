@@ -10,12 +10,17 @@
         </div>
         <div class="form-group">
             <label for="cboRequestor">Requestor</label>
-            <select id="cboRequestor" ng-model="selectedItem" ng-options="card.name for card in creditCardType" class="btn-block vm-select2"></select>
+            <vm-select2 control-id="cboRequestor" place-holder="Select Requestor" ng-model="selectedItems" text-field="name" value-field="value" items="creditCardType"></vm-select2>
         </div>
         <div class="form-group">
             <label for="txtDescription">Description</label>
             <textarea id="txtDescription" class="form-control btn-block" rows="10"></textarea>
         </div>
-        <button type="submit" id="btnSubmit" class="btn btn-default">Submit</button>
-    </form>
+        <div class="vm-text-center">
+            <button type="reset" id="btnReset" class="btn btn-default">Reset</button>
+            &nbsp;
+            <button type="submit" id="btnSubmit" class="btn btn-primary">Submit</button>
+        </div>
+            
+</form>
 </div>

@@ -23,7 +23,7 @@ reachApp.controller('datatableController', function (DTOptionsBuilder, DTColumnB
                }
            }
        })
-    console.log(vm.dtOptions)
+
     vm.dtColumns = [
         DTColumnBuilder.newColumn('id').withTitle('ID').withClass('text-danger'),
         DTColumnBuilder.newColumn('firstName').withTitle('First name'),

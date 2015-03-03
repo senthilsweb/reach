@@ -16,6 +16,7 @@ reachApp.directive('vmSelect2', function ($timeout) {
         link: function (scope, element, attrs, controller) {           
             //http://stackoverflow.com/questions/14483348/query-function-not-defined-for-select2-undefined-error
             //$(".vm-select2").select2({ placeholder: attrs.placeHolder});
+            console.log("#" + attrs.controlId)
             $timeout(function(){  $("#" + attrs.controlId).select2({ placeholder: attrs.placeHolder,allowClear : true })},0);
         }
     };
