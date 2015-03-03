@@ -1,21 +1,21 @@
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+<div ng-controller="helpdeskController">
+    <form>
+        <div class="form-group">
+            <label for="txtTitle">Title</label>
+            <input type="text" class="form-control btn-block" id="txtTitle" placeholder="Title">
+        </div>
+        <div class="form-group">
+            <label for="cboCategory">Category</label>            
+            <vm-select2 control-id="cboCategory" place-holder="Select Category" ng-model="selectedItems" text-field="name" value-field="value" items="creditCardType"></vm-select2>
+        </div>
+        <div class="form-group">
+            <label for="cboRequestor">Requestor</label>
+            <select id="cboRequestor" ng-model="selectedItem" ng-options="card.name for card in creditCardType" class="btn-block vm-select2"></select>
+        </div>
+        <div class="form-group">
+            <label for="txtDescription">Description</label>
+            <textarea id="txtDescription" class="form-control btn-block" rows="10"></textarea>
+        </div>
+        <button type="submit" id="btnSubmit" class="btn btn-default">Submit</button>
+    </form>
+</div>

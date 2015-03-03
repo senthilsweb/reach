@@ -1,5 +1,6 @@
 ﻿    'use strict';
-    var reachApp = angular.module('app', ['ngRoute', 'ngAnimate', 'ngHolder', 'datatables', 'datatables.bootstrap', 'ui.bootstrap']).config([
+    var reachApp = angular.module('app', ['ngRoute', 'ngAnimate','ngHolder', 'datatables', 'datatables.bootstrap', 'ui.bootstrap'])
+    .config([
       '$routeProvider', function ($routeProvider, $locationProvider) {
           var routes, setRoutes;
           routes = ['dashboard', 'login', 'upload','helpdesk'];
@@ -33,7 +34,8 @@
           // use the HTML5 History API
           $locationProvider.html5Mode(true);
       }
-    ]);
+    ]
+    );
 
 
 //# sourceMappingURL=app.js.map

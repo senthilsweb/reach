@@ -1,1 +1,11 @@
 ﻿<h1>Upload</h1>
+<div ng-controller="uploadController">
+    <div class="row>">
+        <div class="col-md-6">Select</div>
+        <div class="col-md-6"><select ng-model="selectedItem" ng-options="card.name for card in creditCardType" class="btn-block vm-select2"></select></div>
+    </div>
+    <p>selected item is : {{selectedItem}}</p>
+    
+</div>
+
+
