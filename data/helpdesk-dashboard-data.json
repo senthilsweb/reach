@@ -1,0 +1,29 @@
+﻿{
+    "TicketsByStatus": {
+        "data": [
+            { "name": "Open", "count": 5, "icon": "fa-unlock-alt" },
+            { "name": "Inprogress", "count": 10, "icon": "fa-spinner" },
+            { "name": "Closed", "count": 34, "icon": "fa-lock" },
+            { "name": "Overrun", "count": 0, "icon": "fa-clock-o" },
+            { "name": "Assigned", "count": 4, "icon": "fa-user" },
+            { "name": "Abandoned", "count": 27, "icon": "fa-times-circle" }
+        ],
+        "TotalRecords": "80"
+    },
+    "TicketsByPriority": {
+        "data": [
+            { "name": "Normal", "count": 122 },
+            { "name": "Low", "count": 39 },
+            { "name": "High", "count": 4 },
+            { "name": "Urgent", "count": 3 }
+        ],
+        "TotalRecords": "168"
+    },
+    "CriticalUnResolvedTickets": 23,
+    "TicketsByTag": [
+        { "Incident": 34 },
+        { "Feedback": 9 },
+        { "Request": 14 },
+        { "Suggestion": 65 }
+    ]
+}

@@ -14,9 +14,9 @@
     <link href="Content/navbar-fixed-top.css.css" rel="stylesheet" />
     <link href="//cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet" />
     <link href="Content/custom.css" rel="stylesheet" />
-    <link href="Content/animations.css" rel="stylesheet" />
-   
+    <link href="Content/animations.css" rel="stylesheet" />    
     <link href="bower_components/select2/select2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bower_components/nvd3/nv.d3.css" />
 </head>
 <body data-ng-app="app" id="app" class="">   
     <div class="container">
@@ -36,6 +36,10 @@
     <script src="bower_components/angular-datatables/dist/plugins/bootstrap/angular-datatables.bootstrap.min.js"></script>
     <script src="bower_components/select2/select2.min.js"></script> 
     
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/nvd3/nv.d3.js"></script>
+    <script src="bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js"></script>
+
     <script src="bower_components/holderjs/holder.min.js"></script>
     <script src="bower_components/angular-holderjs/src/holder.js"></script> 
     <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>    
@@ -43,11 +47,14 @@
     <script src="app/controllers/MainController.js"></script>
     <script src="app/controllers/NavBarController.js"></script>
     <script src="app/controllers/LoginController.js"></script>
-    <script src="app/directives/listGroupDirective.js"></script> 
-
+    <script src="app/directives/listGroupDirective.js"></script>   
+    <script src="app/services/FaqService.js"></script>   
+    <script src="app/controllers/FaqController.js"></script>
+    <script src="app/services/MasterDataService.js"></script>
+    <script src="app/controllers/MasterDataController.js"></script>
     <script src="app/directives/select2Directive.js"></script>
     <script src="app/controllers/DatatableController.js"></script>
-    <script src="app/controllers/AccordionController.js"></script> 
+    
     <script src="app/controllers/HelpdeskController.js"></script>
     <script src="app/controllers/UpoadController.js"></script>
     

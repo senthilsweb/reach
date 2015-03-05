@@ -1,0 +1,41 @@
+﻿{
+    "Hubs": [
+        {
+            "Id": 1,
+            "name": "Bangalore One",
+            "Centers": [
+                { "Id": 11, "name": "Bangalore eHc01" },
+                { "Id": 12, "name": "Bangalore eHc02" },
+                { "Id": 13, "name": "Bangalore eHc03" }
+            ]
+        },
+        {
+            "Id": 2,
+            "name": "Nellore Central",
+            "Centers": [
+                { "Id": 21, "name": "Nellore Central eHc01" },
+                { "Id": 22, "name": "Nellore Central eHc02" },
+                { "Id": 23, "name": "Nellore Central eHc03" }
+            ]
+        },
+        {
+            "Id": 3,
+            "name": "Darwad",
+            "Centers": [
+                { "Id": 31, "name": "Darwad eHc01" },
+                { "Id": 32, "name": "Darwad eHc02" },
+                { "Id": 33, "name": "Darwad eHc03" }
+            ]
+        },
+        {
+            "Id": 4,
+            "name": "Mangalore",
+            "Centers": [
+                { "Id": 41, "name": "Mangalore eHc01" },
+                { "Id": 42, "name": "Mangalore eHc02" },
+                { "Id": 43, "name": "Mangalore eHc03" }
+            ]
+        }
+    ]
+
+}

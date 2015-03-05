@@ -1,0 +1,47 @@
+﻿[
+    {
+        "Id": "1",
+        "Question": "What is Videobook?",
+        "Answer": "VideoBook is an award winning cloud based education product from Hewlett Packard that augments the textbook learning experience with videos. VideoBook has won the prestigious 2012 Wall Street Journal award for technology innovation and was also selected as a Computer World Honors Laureate in 2013."
+    },
+    {
+        "Id": "2",
+        "Question": "How does VideoBook work?",
+        "Answer": "Recent research suggests that visual material significantly enhances retention and comprehension in learning. VideoBook automatically analyzes textbooks and retrieves the relevant videos for each page. The textbook and videos are presented together to enable students to simultaneously learn from the best videos and their prescribed textbooks. VideoBook allows the student to focus on the learning task rather than spend time and effort in searching and browsing for relevant videos."
+    },
+    {
+        "Id": "3",
+        "Question": "How will this help my child?",
+        "Answer": "STEM (Science, Technology, Engineering and Mathematics) education forms a core part of developing a child’s thinking abilities. A solid foundation in STEM will prepare your child for 21st century careers. VideoBook enhances STEM learning by allowing a child to have a deeper understanding of a subject by watching related videos (lectures, animations, demonstrations, experiments). Students spend more time on a textbook page since the learning experience is much richer and this engages them beyond class hours. VideoBook promotes practical understanding and creative thinking by presenting real life applications of the concepts learnt in class."
+    },
+    {
+        "Id": "4",
+        "Question": "What kind of content can I access on Videobook?",
+        "Answer": "Currently, Videobook allows access of open video content for K-12 and Engineering subjects for STEM (Science, Technology, Engineering and Mathematics) topics."
+    },
+    {
+        "Id": "5",
+        "Question": "How many videos per page can I view on Videobook?",
+        "Answer": "Videobook presents a maximum of six videos per page that cover the important topics on the page. In some cases, pages might have fewer videos depending on the type of content on the page."
+    },
+    {
+        "Id": "6",
+        "Question": "Can I explore a topic in greater detail?",
+        "Answer": "For each textbook page, Videobook presents a list of topics that a student can explore in greater detail (in the “Explore additional topics” dropdown list). Making a selection will retrieve videos for the specific topic.)"
+    },
+    {
+        "Id": "7",
+        "Question": "What are the minimum requirements for accessing VideoBook?",
+        "Answer": "VideoBook can be accessed on any PC/laptop and works best with the Google Chrome browser. The quality of video playback will depend on your Internet speed."
+    },
+    {
+        "Id": "8",
+        "Question": "How can I buy VideoBook?",
+        "Answer": "VideoBook is available to individual users through online payment. For schools to enable access of VideoBook to its students, please write to us at <a href='mailto:videobook@hp.com'>videobook@hp.com</a>"
+    },
+    {
+        "Id": "9",
+        "Question": "Where do I go for support and additional information on VideoBook?",
+        "Answer": "VideoBook support is available to you through email at vbsupport@hp.com and toll free access number 1800 – XX – YYYY "
+    }
+]

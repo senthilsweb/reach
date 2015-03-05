@@ -1,0 +1,8 @@
+<div ng-controller="faqController">
+    <accordion>
+        <accordion-group heading="{{faq.Question}}" ng-repeat="faq in faqs">
+            {{faq.Answer}}
+        </accordion-group>
+    </accordion>
+</div>
+

@@ -3,13 +3,12 @@
         <list-group></list-group>
     </div>
     <div class="col-sm-8 col-md-9">        
-        <div class="row">
-            <section data-ng-include=" 'app/views/dashboard/inbox-table.html' "></section>            
+        <div class="row">            
+            <!--<section data-ng-include=" 'app/views/dashboard/inbox-table.html' "></section>-->            
         </div>
-        <div class="row">
-         
-        </div>
+        <div class="row" ng-controller="loginController">
+            <section data-ng-include=" 'app/views/dashboard/pretty-chart.html' "></section>
+                
+            </div>
     </div>    
 </div>
- 
-

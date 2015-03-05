@@ -1,0 +1,24 @@
+﻿ {
+        "TicketTypes": [
+            { "name": "Incident", "value": "01" },
+            { "name": "Feedback", "value": "02" },
+            { "name": "Request", "value": "03" },
+            { "name": "Suggestion", "value": "04" }
+        ],        
+        "Priorities": [
+            { "name": "Normal", "value": "01" },
+            { "name": "Low", "value": "02" },
+            { "name": "High", "value": "03" },
+            { "name": "Urgent", "value": "04" }
+        ],
+         "Requestors": [
+            { "name": "Krishna Mohan", "value": "Krishna Mohan" },
+            { "name": "Mohanty", "value": "Mohanty" },
+            { "name": "Latha", "value": "Latha" },
+            { "name": "Arun", "value": "Arun" },
+            { "name": "Swetha Mohan", "value": "Swetha Mohan" },
+            { "name": "James Rio", "value": "James Rio" },
+            { "name": "Pratima Rai", "value": "Pratima Rai" },
+            { "name": "Preeti Venkataraman", "value": "Preeti Venkataraman" }
+        ]
+    } 

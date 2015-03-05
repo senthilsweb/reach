@@ -1,0 +1,700 @@
+﻿@import url(http://weloveiconfonts.com/api/?family=entypo|iconicfill|brandico|zocial|fontawesome);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+/* iconicfill */
+[class*="iconicfill-"]:before {
+  font-family: 'IconicFill', sans-serif;
+}
+
+/* brandico */
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif;
+}
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+@media(min-width:569px, not print) {
+  body::-webkit-scrollbar, #sidebar-wrapper::-webkit-scrollbar{
+    position: absolute;
+    width:13px;
+    background-color:#181818;
+    border:2px solid #0e0e0e;
+  }
+  body::-webkit-scrollbar-thumb, #sidebar-wrapper::-webkit-scrollbar-thumb{
+    background-color:#393939;
+    border-radius:10px;
+    background-clip: content-box;
+    border: 2px solid transparent;
+  }
+  body::-webkit-scrollbar-thumb:hover, #sidebar-wrapper::-webkit-scrollbar-thumb:hover{
+    background-color:#626262;
+  }
+  body::-webkit-scrollbar-thumb:active, #sidebar-wrapper::-webkit-scrollbar-thumb:active{
+    background-color:#eae5da;
+  }  
+}
+
+.full-width {
+  width: 100%;
+  height: 100%;
+  transition: -webkit-transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+  transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.view {
+  will-change: transform;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+
+}
+.view-detail {
+  -webkit-transform: translate3d(100%,0,0);
+  transform: translate3d(100%,0,0);
+  width:100%;
+  background-color: #333;
+  top: 0;
+}
+.visible {
+  /* use percent, pixels or em */
+  -webkit-transform: translate3d(-10%,0,0);
+  transform: translate3d(-10%,0,0);
+}
+
+.clickable {
+  cursor:pointer;
+}
+
+.modal-padding {
+  padding: 10px;
+}
+
+.close-inverse {
+  color: blue;
+}
+
+.btn-disabled {
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  float: right;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #DDDDDD;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+.ui-state-highlight {
+  background:rgba(241,242,230,0.3);
+  border-style:none;
+  border-radius: 6px;
+  text-align: justify;
+  display: inline-block;
+  vertical-align: middle;
+  height: 180px;
+  width: 330px;
+  margin-left: 10px;
+  margin-top: 13px;
+}
+
+.thumb {
+  background-color: #CCC;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 1px solid #000;
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+}
+
+footer {
+  text-align:center;  
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+}
+
+
+.img-medium {
+  max-width:100% !important;
+  height:auto;
+  display:block;
+}
+
+.bg-dark {
+  background: #222222;
+  border-color: #222222;
+}
+
+.bg-grey {
+  background: #cecece;
+  border-color: #222222;
+}
+
+.bg-dark-grey {
+  background: #939393;
+  border-color: #939393;
+}
+
+.text-light {
+  color: white !important;
+}
+
+.bigIcon {
+  font-size: 150%;
+}
+
+input[type=text]{
+  background: #B2C2B2;
+  -webkit-transition: 0.5s ease-in-out all;
+  -moz-transition: 0.5s ease-in-out all;
+  -ms-transition: 0.5s ease-in-out all;
+  -o-transition: 0.5s ease-in-out all;
+  transition: 0.5s ease-in-out all;
+}
+
+input[type=text]:focus{
+  border-color:#66CCFF;
+  border:5px solid #66CCFF;
+  /*-moz-box-shadow: 0px 0px 14px #66CCFF;
+  -webkit-box-shadow: 0px 0px 14px #66CCFF;
+  box-shadow: 0px 0px 14px #66CCFF;*/
+}
+
+html, body {
+  background-image: url("http://gourmetburgercairo.com/wp-content/uploads/2013/09/weback2.jpg");
+  /*height: 100%;*/
+  color: grey;
+  font-family: HelveticaNeueFontsCom, 'Helvetica Neue', Helvetica, Arial;
+  font-size:small;
+  overflow-x:hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+  overflow-y:overlay;
+}
+
+.gridster {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 13px;
+}
+
+.dataBox {
+  flex: 0 0 auto;
+  order: 100;
+  margin-left: 10px;
+  margin-top: 13px;
+}
+
+b {color: crimson;font-weight:bold;}
+
+table {
+  border-collapse:collapse;
+  width: 100%;
+  border-spacing:40px;
+}
+td {
+  padding: 10px;
+}
+tr:nth-child(odd) {background: #bcbcb3}
+
+ul{
+  list-style:none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+li {
+  font-size: small;
+}
+
+.dataBox p {
+  word-wrap:break-word;
+  overflow-y: hidden;
+  height: 120px;
+  width: 260px;
+  text-align: justify;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 15px;
+}
+/* Gridster widgets design */
+.outer{
+  background:rgba(241,242,230,0.6);
+  border-radius: 6px;
+  text-align: justify;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.5);
+  transform: perspective( 600px );
+}
+
+.outer-dark {
+  background:rgba(66, 66, 66,0.6);
+}
+
+.sortable .outer-pcbGreen {
+  background:rgba(31, 122, 52, 1);
+  width: 330px;
+  height:180px;
+}
+
+.static-PCBBoard {
+  background: rgba(31, 122, 52, 1);
+  width: 100%;
+  height: 92px;
+}
+
+.scrollable .inner{
+  background:rgba(242,242,230,0.8);
+  position:relative;
+  text-align: center;
+  height: 150px;
+  width: 300px;
+  margin: 15px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+}
+
+.inner-dark {
+  background:rgba(0, 0, 0,0.8);
+}
+
+.inner-pcbGreen {
+  background:rgba(31, 122, 52, 1);
+  overflow: visible;
+}
+
+.width-pcb {
+  background:rgba(31, 122, 52, 1);
+  width:100%;
+  margin: 0px;
+}
+
+.static {
+  width: 100%;
+  margin: 0px;
+  margin-bottom: 20px;
+  font-size: 0px;
+}
+
+.nav-no-margin {
+  margin: 0px;
+}
+
+/*
+@media screen and (max-device-width : 600px) {
+.inner {
+width: 247px !important;
+}
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+
+}
+*/
+
+/*!
+* Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+* Code licensed under the Apache License v2.0.
+* For details, see http://www.apache.org/licenses/LICENSE-2.0.
+*/
+
+/* Toggle Styles */
+
+#wrapper {
+  padding-right: 100px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-right: 0;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  right: 250px;
+  width: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  margin-right: -250px;
+  overflow-y: auto;
+  background: #606060;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
+  overflow-x: hidden;
+  /*background-image: url('http://www.thinksnaps.com/wp-content/uploads/2014/07/152-black-background-metal-hole-wallpaper.jpg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;*/
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 0;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height:100%;
+  top: 0px;
+  padding-top: 57px;
+  z-index: 0;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+@media(min-width:400px) {
+  #wrapper {
+    padding-right: 250px;
+  }
+
+  #wrapper.toggled {
+    padding-right: 0;
+  }
+
+  #sidebar-wrapper {
+    width: 250px;
+    top: 0;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0;
+  }
+
+  #page-content-wrapper {
+    padding: 20px;
+  }
+
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+
+  .sidebar-nav {
+    width: 250px;
+  }
+}
+
+@media(max-width:399px) {
+  #wrapper {
+    padding-right: 170px;
+  }
+
+  #wrapper.toggled {
+    padding-right: 0;
+  }
+
+  #sidebar-wrapper {
+    width: 170px;
+    top: 0;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0;
+  }
+
+  #page-content-wrapper {
+    padding: 20px;
+  }
+
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+
+  .sidebar-nav {
+    width: 170px;
+  }
+}
+
+@media(max-width:350px) {
+  .inner {
+    zoom: 88%;
+  }
+}
+
+@media only screen 
+  and (min-device-width : 597px) and (max-device-width : 599px) ,
+  only screen 
+  and (min-device-width : 568px) and (max-device-width : 568px) {
+    .inner {
+      zoom: 84%;
+    }
+  }
+
+
+@media(max-width:550px) {
+  .hidden-xxs {
+    display: none;
+  }
+}
+
+
+
+.logItem {
+  width:80%;
+  background-color: yellow;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 4px;
+  color: white;
+}
+
+.timeEntry {
+  background-color: #222222;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.error {
+  background-color: #CE5757;
+}
+
+.success {
+  background-color: #59B56C;
+}
+
+.inner-shadow {
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
+}
+
+.log-menu {
+  position: absolute;
+  display:table !important;
+  width: 100%;
+  height: 53px;
+  background-color: #3f3f3f;
+  font-size: 100%;
+  color: white;
+  box-shadow: 0 5px 4px #282828;
+  z-index: 1;
+}
+
+.log-menu p {
+
+}
+
+.log-menu button {
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.log-menu .al {
+  position: absolute;
+  left: 0px;
+}
+.log-menu .ar {
+  position: absolute;
+  right: 0px;
+}
+
+.content {
+  position: absolute; 
+  left: 0; 
+  top: 15%; 
+  width: 100%; 
+  display: table; 
+}
+
+.content .time {
+
+  font-size: 250%;
+}
+
+#weather h2,#weather li{
+  font-size: 70%;
+  display: inline-block
+}
+
+.horizontal-align {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vertical-align-inside {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.vertical-align-inside>div {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bottom-align {
+  position: absolute;
+  bottom: 0px;
+  margin: 2%;
+}
+
+.lcd-input .title {
+  color: white;
+}
+.lcd-input>* {
+  display: inline-block;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.navbar {
+  margin-bottom: 0px;
+}
+
+.web-title {
+  display: none!important;
+}
+
+@media print {
+  .outer{
+    background-color: rgba(242,242,230,0.8)!important;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.5) !important;
+    border: 5px solid black!important;
+    display: block;
+
+  }
+  .lcdscreen {
+    background-color: #eaeaea!important;
+    border:10px solid #303030!important;
+  }
+
+  .pixel {
+    background-color: #c9c9c9!important;
+  }
+
+  .pixel-on {
+    background-color: #000000!important;
+  }
+  b {color: crimson!important;font-weight:bold;}
+
+  table {
+    border-collapse:collapse;
+    width: 100%;
+    border-spacing:40px;
+  }
+  td {
+    padding: 10px;
+  }
+  tr:nth-child(odd) {background: #bcbcb3!important}
+  .web-title {
+    display: block!important;
+    font-size: 350%;
+  }
+  .sortable {
+    margin: auto!important;
+  }
+}

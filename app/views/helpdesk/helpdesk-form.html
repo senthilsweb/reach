@@ -1,26 +1,30 @@
-<div ng-controller="helpdeskController">
+<div ng-controller="masterDataController">
     <form>
         <div class="form-group">
             <label for="txtTitle">Title</label>
             <input type="text" class="form-control btn-block" id="txtTitle" placeholder="Title">
         </div>
         <div class="form-group">
-            <label for="cboCategory">Category</label>            
-            <vm-select2 control-id="cboCategory" place-holder="Select Category" ng-model="selectedItems" text-field="name" value-field="value" items="creditCardType"></vm-select2>
+            <label for="cboCategory">Category</label>
+            <vm-select2 control-id="cboCategory" place-holder="Select Category" ng-model="selectedItems" text-field="name" value-field="value" items="TicketTypes"></vm-select2>
         </div>
         <div class="form-group">
             <label for="cboRequestor">Requestor</label>
-            <vm-select2 control-id="cboRequestor" place-holder="Select Requestor" ng-model="selectedItems" text-field="name" value-field="value" items="creditCardType"></vm-select2>
+            <vm-select2 control-id="cboRequestor" place-holder="Select Requestor" ng-model="selectedItems" text-field="name" value-field="value" items="Requestors"></vm-select2>
         </div>
         <div class="form-group">
             <label for="txtDescription">Description</label>
-            <textarea id="txtDescription" class="form-control btn-block" rows="10"></textarea>
+            <textarea id="txtDescription" class="form-control btn-block" rows="6"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="cboPriority">Priority</label>
+            <vm-select2 control-id="cboPriority" place-holder="Select Priority" ng-model="selectedItems" text-field="name" value-field="value" items="Priorities"></vm-select2>
         </div>
         <div class="vm-text-center">
             <button type="reset" id="btnReset" class="btn btn-default">Reset</button>
             &nbsp;
             <button type="submit" id="btnSubmit" class="btn btn-primary">Submit</button>
         </div>
-            
-</form>
+
+    </form>
 </div>

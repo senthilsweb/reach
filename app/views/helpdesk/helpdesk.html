@@ -1,20 +1,14 @@
 ﻿<div class="row">
-<div class="col-sm-7">
-    <div class="alert alert-info" role="alert">
-    <strong>Raise a Ticket</strong> 
-</div>
-    <section data-ng-include=" 'app/views/helpdesk/helpdesk-form.html' "></section> 
-</div>
+    <div class="col-sm-7">
+        <div class="alert alert-info" role="alert">
+            <strong>Raise a Ticket</strong>
+        </div>
+        <section data-ng-include=" 'app/views/helpdesk/helpdesk-form.html' "></section>
+    </div>
     <div class="col-sm-5">
         <div class="alert alert-info" role="alert">
-    <strong>FAQ</strong> 
-</div>
-        <div ng-controller="accordionController">
-    <accordion>
-        <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-            {{group.content}}
-        </accordion-group>
-    </accordion>
-</div>
-</div>
+            <strong>FAQ</strong>
+        </div>
+        <section data-ng-include=" 'app/views/helpdesk/faq.html' "></section>
     </div>
+</div>
