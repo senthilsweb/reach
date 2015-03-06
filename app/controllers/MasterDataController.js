@@ -1,5 +1,8 @@
 ﻿'use strict';
 reachApp.controller('masterDataController', function ($scope, masterDataService) {
+
+
+
     
     var findAllTicketTypes = function () {
         console.log("findAllTicketTypes")

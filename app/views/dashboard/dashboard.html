@@ -1,14 +1,18 @@
-﻿<div class="row">
-    <div class="col-sm-4 col-md-3 sidebar">        
+﻿<div class="row" ng-controller="loginController">
+    <div class="col-sm-4 col-md-3 sidebar">
         <list-group></list-group>
     </div>
-    <div class="col-sm-8 col-md-9">        
-        <div class="row">            
-            <!--<section data-ng-include=" 'app/views/dashboard/inbox-table.html' "></section>-->            
+    <div class="col-sm-8 col-md-9">
+        <div class="row">
+            <!--<section data-ng-include=" 'app/views/dashboard/inbox-table.html' "></section>-->
+            <section data-ng-include=" 'app/views/dashboard/area-chart.html' "></section>
+            
         </div>
-        <div class="row" ng-controller="loginController">
+        <div class="row">            
+            <section data-ng-include=" 'app/views/dashboard/bar-chart.html' "></section>
+        </div>
+        <div class="row">
             <section data-ng-include=" 'app/views/dashboard/pretty-chart.html' "></section>
-                
-            </div>
-    </div>    
+        </div>
+    </div>
 </div>
