@@ -1,0 +1,13 @@
+﻿<div ng-if="Search">
+    <vm-title title-value="Review & upload" style-value="info alert-info"></vm-title>
+    <div ng-controller="datatableController as showCase">
+        <div class="row vm-datatable">
+            <table datatable="" dt-options="showCase.dtOptions" dt-columns="showCase.dtColumns" class="table table-striped table-condensed table-responsive"></table>
+        </div>
+        <div class="row">&nbsp;</div>
+        <div class="row pull-right">
+            <button type="submit" id="btnUpload" class="btn btn-success"><i class="fa fa-cloud-upload"></i>&nbsp;Upload To Open EMR</button>
+        </div>
+    </div>
+</div>
+

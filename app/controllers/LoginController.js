@@ -115,41 +115,58 @@ reachApp.controller('loginController', function ($scope, $window) {
         }]
     },
 
-    $scope.funnelChartConfig = {
-
-        options: {
-            chart: {
-                type: 'funnel'
-            }
-        },       
+    $scope.barChartConfig = {
+        options: {  chart: {
+            type: 'bar'
+        }}
+      ,
         title: {
-            text: 'Patients funnel',
-            x: -50
+            text: ' '
         },
-        plotOptions: {
-            series: {
-                dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b> ({point.y:,.0f})',
-                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
-                    softConnector: true
-                },
-                neckWidth: '30%',
-                neckHeight: '25%'
+        xAxis: {
+            type: 'category',
+            labels: {
+                rotation: 0,
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
             }
-        },       
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '#. of tckets'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        size: {
+           
+            height: 300
+        },
         series: [{
-            name: 'Unique users',
+            name: 'Priority',
             data: [
-                ['Total Users Visit',   340],
-                ['General Medicine',       200],
-                ['Orthopaedics', 96],
-                ['Paedratic',    101],
-                ['E&T',    5]
-            ]
+                ['Normal', 128],
+                ['Low', 78],
+                ['High', 23],
+                ['Urgent', 3]
+            ],
+            dataLabels: {
+                enabled: true,
+                rotation: -90,
+                color: '#FFFFFF',
+                align: 'right',
+                //format: '{point.y:.1f}', // one decimal
+                y: 0, // 10 pixels down from the top
+                style: {
+                    fontSize: '10px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
         }]
-    
-       
     }
 
 

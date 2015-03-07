@@ -1,23 +1,16 @@
-﻿<div class="row" id="pwd-container">
+﻿
+<div class="row" id="pwd-container">
     <div class="col-md-4"></div>
 
     <div class="col-md-4">
-        <section class="login-form" ng-controller="loginController">
-            <form role="login">                
+        <section class="login-form" ng-controller="masterDataController">
+            <form role="login">
                 <img src="app/img/logo.png" class="img-responsive" alt="" />
-                <input type="email" name="email" placeholder="Email" required class="form-control input-lg" value="joestudent@gmail.com" />
-
-                <input type="password" class="form-control input-lg" id="password" placeholder="Password" required="" />
-
-
+                <vm-select2 control-id="cboHub" place-holder="Select Hub" text-field="name" value-field="value" items="Hubs"></vm-select2>
+                <input type="email" name="email" placeholder="Email" required class="form-control input-lg" value="mohanthy@hpehc.co.in" />
+                <input type="password" class="form-control input-lg" id="password" placeholder="Password" required="" value="mohanthy" />
                 <div class="pwstrength_viewport_progress"></div>
-
-
                 <button class="btn btn-lg btn-primary btn-block" ng-click="signIn()">Sign in</button>
-                <div>
-                    <a href="#">Create account</a> or <a href="#">reset password</a>
-                </div>
-
             </form>
 
 

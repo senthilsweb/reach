@@ -1,11 +1,10 @@
-<vm-title title-value="Serach" style-value="info alert-info"></vm-title>
-<div ng-controller="uploadSearchController">
+<vm-title title-value="Search" style-value="info alert-info"></vm-title>
+<div class="well" ng-controller="uploadSearchController">
     <form>
-
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" ng-controller="masterDataController">
                 <label>Status</label>
-                <vm-select2 control-id="cboUploadStatus" place-holder="Select Status" ng-model="selectedItems" text-field="name" value-field="value" items="TicketTypes"></vm-select2>
+                <vm-select2 control-id="cboHoldingDataStatus" place-holder="Select Holding Data Status" text-field="name" value-field="value" items="HoldingDataStatus"></vm-select2>
             </div>
         </div>
         <br />

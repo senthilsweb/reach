@@ -1,9 +1,19 @@
 ﻿'use strict';
-reachApp.controller('masterDataController', function ($scope, masterDataService) {
+reachApp.controller('masterDataController', function ($scope, masterDataService, $window) {
 
 
+    $scope.signIn = function () {
+        $window.location.href = '#/dashboard';
+    };
 
-    
+    var findAllHubs = function () {
+        console.log("findAllHubs")
+        masterDataService.findAllHubs().then(function (res) {
+            $scope.Hubs = res;
+            console.log(res)
+        });
+    }
+
     var findAllTicketTypes = function () {
         console.log("findAllTicketTypes")
         masterDataService.findAllTicketTypes().then(function (res) {                       
@@ -23,8 +33,17 @@ reachApp.controller('masterDataController', function ($scope, masterDataService)
         });
     }
 
+    var findAllHoldingDataStatus = function () {
+        masterDataService.findAllHoldingDataStatus().then(function (res) {
+            console.log(res);
+            $scope.HoldingDataStatus = res;
+        });
+    }
+
     findAllTicketTypes();
     findAllPriorities();
     findAllRequestors();
+    findAllHubs();
+    findAllHoldingDataStatus();
 
 });

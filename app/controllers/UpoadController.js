@@ -26,7 +26,8 @@ reachApp.controller('datatableController', function (DTOptionsBuilder, DTColumnB
 
     vm.dtColumns = [
         DTColumnBuilder.newColumn('Id').withTitle('ID').notVisible(),
-        DTColumnBuilder.newColumn(null).withTitle('').renderWith(actionsHtml).notSortable(),        
+        DTColumnBuilder.newColumn(null).withTitle('').renderWith(actionsHtml).notSortable(),
+        DTColumnBuilder.newColumn(null).withTitle('<center><i class="fa fa-square-o"></i></center>').renderWith(selectAll).withClass('vm-text-th-center vm-text-td-center').notSortable(),
         DTColumnBuilder.newColumn('Id').withTitle('ID'),
         DTColumnBuilder.newColumn('Name').withTitle('Patient Name').withClass('vm-text-th-center vm-text-td-center'),
         DTColumnBuilder.newColumn('Illness').withTitle('Illness').withClass('vm-text-center'),
@@ -42,6 +43,12 @@ reachApp.controller('datatableController', function (DTOptionsBuilder, DTColumnB
         var actions = '<a href="javascript:void(;)"><i class="fa fa-level-down text-primary"></i></a>';
         actions += '&nbsp;&nbsp;<a href="javascript:void(;)"><i class="fa fa-edit text-primary"></i></a>';
         actions += '&nbsp;&nbsp;<a href="javascript:void(;)"><i class="fa fa-trash-o text-danger"></i></a>';
+        return actions;
+    }
+
+    function selectAll(data, type, full, meta) {
+        //console.log(data)
+        var actions = '<center><a href="javascript:void(;)"><i class="fa fa-square-o"></i></a></center>';
         return actions;
     }
 

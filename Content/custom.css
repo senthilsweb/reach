@@ -59,7 +59,9 @@ border-radius: 50%;
 .vm-text-center{text-align:center;}
 th.vm-text-th-center{text-align:center;}
 td .vm-text-td-center{text-align:center;}
+.vm-datatable{padding-left:20px;}
 
+/*bs callout (start)*/
 .bs-callout {
     padding: 10px;
     margin-bottom: 10px;
@@ -107,3 +109,14 @@ td .vm-text-td-center{text-align:center;}
 .bs-callout-info h4 {
     color: #1b809e;
 }
+/*bs callout (end)*/
+/*bs select2 override (start)*/
+.select2-choices {
+  min-height: 150px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+.bigdrop .select2-container .select2-results {max-height: 500px;}
+.bigdrop .select2-results {max-height: 500px;}
+.bigdrop .select2-choices {min-height: 250px; max-height: 500px; overflow-y: auto;}
+/*bs select2 override (end)*/

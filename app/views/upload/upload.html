@@ -5,14 +5,7 @@
             <section data-ng-include=" 'app/views/upload/search.html' "></section>
         </div>
         <div class="col-sm-4 col-md-9 well-sm" style="padding-left:10px;">            
-            <div ng-if="Search">
-                <vm-title title-value="Review, select & upload" style-value="info alert-info"></vm-title>
-                <div ng-controller="datatableController as showCase">
-                    <div class="row vm-datatable">
-                        <table datatable="" dt-options="showCase.dtOptions" dt-columns="showCase.dtColumns" class="table table-striped table-condensed table-responsive"></table>
-                    </div>
-                </div>
-            </div>
+            <section data-ng-include=" 'app/views/upload/upload-datatable.html' "></section>
         </div>
     </div>
 </form>
