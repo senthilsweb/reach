@@ -1,5 +1,5 @@
 ﻿    'use strict';
-    var reachApp = angular.module('app', ['ngRoute', 'ngAnimate', 'ngHolder', 'nvd3ChartDirectives','ui.knob', 'datatables', 'datatables.bootstrap', 'ui.bootstrap'])
+    var reachApp = angular.module('app', ['ngRoute', 'ngAnimate', 'highcharts-ng', 'ngHolder', 'nvd3ChartDirectives', 'ui.knob', 'datatables', 'datatables.bootstrap', 'ui.bootstrap'])
     .config([
       '$routeProvider', function ($routeProvider, $locationProvider) {
           var routes, setRoutes;

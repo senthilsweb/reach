@@ -6,18 +6,13 @@ reachApp.controller('loginController', function ($scope, $window) {
     };
 
     $scope.exampleData = [
-         {
-             "key": "Series 1",
-             "values": [{ "x": "2010", "y": 40 }, { "x": "2011", "y": 60 }, { "x": "2012", "y": 80 }]
-         },
-         {
-             "key": "Series 2",
-             "values": [{ "x": "2010", "y": 50 }, { "x": "2011", "y": 80 }, { "x": "2012", "y": 90 }]
-         },
-         {
-             "key": "Series 3",
-             "values": [{ "x": "2010", "y": 10 }, { "x": "2011", "y": 40 }, { "x": "2012", "y": 120 }]
-         }
+                   { key: "One", y: 5 },
+                   { key: "Two", y: 2 },
+                   { key: "Three", y: 9 },
+                   { key: "Four", y: 7 },
+                   { key: "Five", y: 4 },
+                   { key: "Six", y: 3 },
+                   { key: "Seven", y: 9 }
     ];
 
 
@@ -32,17 +27,6 @@ reachApp.controller('loginController', function ($scope, $window) {
                     	["Urgent", 3]
                     ]
                 }
-    ];
-
-
-    $scope.exampleData1 = [
- { key: "One", y: 5 },
-{ key: "Two", y: 2 },
-       { key: "Three", y: 9 },
-         { key: "Four", y: 7 },
-        { key: "Five", y: 4 },
-         { key: "Six", y: 3 },
-        { key: "Seven", y: 9 }
     ];
 
     $scope.xAxisTickFormatFunction = function () {
@@ -91,6 +75,83 @@ reachApp.controller('loginController', function ($scope, $window) {
             return d.y;
         };
     }
+
+    $scope.chartConfig = {
+
+        options: {
+            chart: {
+                type: 'line'
+            }
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar','APR']
+        },
+        yAxis: {
+            title: {
+                text: 'Average Tickets'
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: false
+            }
+        },
+        size: {
+           
+            height: 250
+        },
+        series: [{
+            name: 'Complaints',
+            data: [7, 12, 22,0]
+        }, {
+            name: 'Feedback',
+            data: [4, 6, 13,0]
+        }]
+    },
+
+    $scope.funnelChartConfig = {
+
+        options: {
+            chart: {
+                type: 'funnel'
+            }
+        },       
+        title: {
+            text: 'Patients funnel',
+            x: -50
+        },
+        plotOptions: {
+            series: {
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b> ({point.y:,.0f})',
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+                    softConnector: true
+                },
+                neckWidth: '30%',
+                neckHeight: '25%'
+            }
+        },       
+        series: [{
+            name: 'Unique users',
+            data: [
+                ['Total Users Visit',   340],
+                ['General Medicine',       200],
+                ['Orthopaedics', 96],
+                ['Paedratic',    101],
+                ['E&T',    5]
+            ]
+        }]
+    
+       
+    }
+
 
 
    
