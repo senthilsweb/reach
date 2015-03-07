@@ -10,13 +10,13 @@ jQuery.each( [ jQuery.expando, "getInterface", "Packages", "java", "netscape" ],
 
 // Expose Sizzle for Sizzle's selector tests
 // We remove Sizzle's globalization in jQuery
-var Sizzle = Sizzle || jQuery.find,
+var Sizzle = Sizzle || jQuery.find;
 
 // Allow subprojects to test against their own fixtures
-	qunitModule = QUnit.module,
+var qunitModule = QUnit.module,
 	qunitTest = QUnit.test;
 
-this.testSubproject = function( label, url, risTests ) {
+function testSubproject( label, url, risTests ) {
 	var sub, fixture, fixtureHTML,
 		fixtureReplaced = false;
 
@@ -132,11 +132,11 @@ this.testSubproject = function( label, url, risTests ) {
 			fn.apply( this, arguments );
 		};
 	}
-};
+}
 
 // Register globals for cleanup and the cleanup code itself
 // Explanation at http://perfectionkills.com/understanding-delete/#ie_bugs
-this.Globals = (function() {
+var Globals = (function() {
 	var globals = {};
 	return {
 		register: function( name ) {
@@ -172,11 +172,11 @@ this.Globals = (function() {
 	// instead of asserting every time a test has leaked sometime in the past
 	var oldCacheLength = 0,
 		oldFragmentsLength = 0,
+		oldTimersLength = 0,
 		oldActive = 0,
 
 		expectedDataKeys = {},
 
-		splice = [].splice,
 		reset = QUnit.reset,
 		ajaxSettings = jQuery.ajaxSettings;
 
@@ -200,53 +200,47 @@ this.Globals = (function() {
 	 */
 	QUnit.expectJqData = function( elems, key ) {
 		var i, elem, expando;
+		QUnit.current_testEnvironment.checkJqData = true;
 
-		// As of jQuery 2.0, there will be no "cache"-data is
-		// stored and managed completely below the API surface
-		if ( jQuery.cache ) {
-			QUnit.current_testEnvironment.checkJqData = true;
+		if ( elems.jquery && elems.toArray ) {
+			elems = elems.toArray();
+		}
+		if ( !jQuery.isArray( elems ) ) {
+			elems = [ elems ];
+		}
 
-			if ( elems.jquery && elems.toArray ) {
-				elems = elems.toArray();
+		for ( i = 0; i < elems.length; i++ ) {
+			elem = elems[i];
+
+			// jQuery.data only stores data for nodes in jQuery.cache,
+			// for other data targets the data is stored in the object itself,
+			// in that case we can't test that target for memory leaks.
+			// But we don't have to since in that case the data will/must will
+			// be available as long as the object is not garbage collected by
+			// the js engine, and when it is, the data will be removed with it.
+			if ( !elem.nodeType ) {
+				// Fixes false positives for dataTests(window), dataTests({}).
+				continue;
 			}
-			if ( !jQuery.isArray( elems ) ) {
-				elems = [ elems ];
-			}
 
-			for ( i = 0; i < elems.length; i++ ) {
-				elem = elems[i];
+			expando = elem[ jQuery.expando ];
 
-				// jQuery.data only stores data for nodes in jQuery.cache,
-				// for other data targets the data is stored in the object itself,
-				// in that case we can't test that target for memory leaks.
-				// But we don't have to since in that case the data will/must will
-				// be available as long as the object is not garbage collected by
-				// the js engine, and when it is, the data will be removed with it.
-				if ( !elem.nodeType ) {
-					// Fixes false positives for dataTests(window), dataTests({}).
-					continue;
-				}
-
-				expando = elem[ jQuery.expando ];
-
-				if ( expando === undefined ) {
-					// In this case the element exists fine, but
-					// jQuery.data (or internal data) was never (in)directly
-					// called.
-					// Since this method was called it means some data was
-					// expected to be found, but since there is nothing, fail early
-					// (instead of in teardown).
-					notStrictEqual( expando, undefined, "Target for expectJqData must have an expando, for else there can be no data to expect." );
+			if ( expando === undefined ) {
+				// In this case the element exists fine, but
+				// jQuery.data (or internal data) was never (in)directly
+				// called.
+				// Since this method was called it means some data was
+				// expected to be found, but since there is nothing, fail early
+				// (instead of in teardown).
+				notStrictEqual( expando, undefined, "Target for expectJqData must have an expando, for else there can be no data to expect." );
+			} else {
+				if ( expectedDataKeys[expando] ) {
+					expectedDataKeys[expando].push( key );
 				} else {
-					if ( expectedDataKeys[expando] ) {
-						expectedDataKeys[expando].push( key );
-					} else {
-						expectedDataKeys[expando] = [ key ];
-					}
+					expectedDataKeys[expando] = [ key ];
 				}
 			}
 		}
-
 	};
 	QUnit.config.urlConfig.push( {
 		id: "jqdata",
@@ -286,20 +280,6 @@ this.Globals = (function() {
 		// Reset data register
 		expectedDataKeys = {};
 
-		// Check for (and clean up, if possible) incomplete animations/requests/etc.
-		if ( jQuery.timers && jQuery.timers.length !== 0 ) {
-			equal( jQuery.timers.length, 0, "No timers are still running" );
-			splice.call( jQuery.timers, 0, jQuery.timers.length );
-			jQuery.fx.stop();
-		}
-		if ( jQuery.active !== undefined && jQuery.active !== oldActive ) {
-			equal( jQuery.active, oldActive, "No AJAX requests are still active" );
-			if ( ajaxTest.abort ) {
-				ajaxTest.abort("active requests");
-			}
-			oldActive = jQuery.active;
-		}
-
 		// Allow QUnit.reset to clean up any attached elements before checking for leaks
 		QUnit.reset();
 
@@ -323,6 +303,17 @@ this.Globals = (function() {
 			equal( fragmentsLength, oldFragmentsLength, "No unit tests leak memory in jQuery.fragments" );
 			oldFragmentsLength = fragmentsLength;
 		}
+		if ( jQuery.timers && jQuery.timers.length !== oldTimersLength ) {
+			equal( jQuery.timers.length, oldTimersLength, "No timers are still running" );
+			oldTimersLength = jQuery.timers.length;
+		}
+		if ( jQuery.active !== undefined && jQuery.active !== oldActive ) {
+			equal( jQuery.active, 0, "No AJAX requests are still active" );
+			if ( ajaxTest.abort ) {
+				ajaxTest.abort("active requests");
+			}
+			oldActive = jQuery.active;
+		}
 	};
 
 	QUnit.done(function() {
@@ -343,7 +334,7 @@ this.Globals = (function() {
 		} else {
 			delete jQuery.ajaxSettings;
 		}
-
+		
 		// Cleanup globals
 		Globals.cleanup();
 

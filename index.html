@@ -18,14 +18,15 @@
     <link href="bower_components/select2/select2.css" rel="stylesheet" />
     <link rel="stylesheet" href="bower_components/nvd3/nv.d3.css" />
 </head>
-<body data-ng-app="app" id="app" class="">   
+<body data-ng-app="app" id="app" ng-controller="mainController">
+    
     <div class="container">
-        <section data-ng-include=" 'app/views/navbar.html' " id="navbar"></section>        
+        <section data-ng-include=" 'app/views/navbar.html' " id="navbar"></section>
         <div id="content" class="content-container">
             <section data-ng-view class="view-container at-view-rotate-fade-in at-view-rotate-fade-out" ng-controller="mainController"></section>
         </div>
         <!--<section data-ng-include=" 'app/views/footer.html' " id="footer"></section>-->
-    </div> <!-- /container -->  
+    </div> <!-- /container -->
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
@@ -34,24 +35,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
     <script src="bower_components/angular-datatables/dist/angular-datatables.min.js"></script>
     <script src="bower_components/angular-datatables/dist/plugins/bootstrap/angular-datatables.bootstrap.min.js"></script>
-    <script src="bower_components/select2/select2.min.js"></script> 
-    
+    <script src="bower_components/select2/select2.min.js"></script>
+
     <script src="bower_components/d3/d3.js"></script>
     <script src="bower_components/nvd3/nv.d3.js"></script>
     <script src="bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js"></script>
     <script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
     <script src="bower_components/angular-knob/src/angular-knob.js"></script>
     <script src="bower_components/holderjs/holder.min.js"></script>
-    <script src="bower_components/angular-holderjs/src/holder.js"></script> 
+    <script src="bower_components/angular-holderjs/src/holder.js"></script>
     <script src="bower_components/highcharts/highcharts.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.3/jquery.backstretch.min.js"></script>
+    <script src="bower_components/angular-backstretch/angular-backstretch.js"></script>
     <script src="bower_components/highcharts-ng/dist/highcharts-ng.min.js"></script>
-    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>    
-    <script src="app/app.js"></script>  
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="app/app.js"></script>
     <script src="app/controllers/MainController.js"></script>
     <script src="app/controllers/NavBarController.js"></script>
     <script src="app/controllers/LoginController.js"></script>
-    <script src="app/directives/listGroupDirective.js"></script>   
-    <script src="app/services/FaqService.js"></script>   
+    <script src="app/directives/listGroupDirective.js"></script>
+    <script src="app/services/FaqService.js"></script>
     <script src="app/controllers/FaqController.js"></script>
     <script src="app/services/MasterDataService.js"></script>
     <script src="app/controllers/MasterDataController.js"></script>
@@ -61,6 +64,6 @@
     <script src="app/controllers/UploadSearchController.js"></script>
     <script src="app/controllers/HelpdeskController.js"></script>
     <script src="app/controllers/UpoadController.js"></script>
-    
+
 </body>
 </html>
