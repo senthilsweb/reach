@@ -1,5 +1,5 @@
 ﻿'use strict';
-reachApp.controller('navBarController', function ($rootScope,$scope, $location) {   
+reachApp.controller('navBarController', function ($rootScope,$scope, $location,$modal,$log) {   
    
     $scope.noop = function () {
         console.log("noop")       
