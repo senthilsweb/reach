@@ -8,6 +8,9 @@
             </div>
         </div>
         <br />
+        <!--refer the fix for multiple date picker in a page
+            http://stackoverflow.com/questions/19613510/how-to-have-at-least-two-datepickers-of-ui-bootstrap-on-a-single-page
+            -->
         <div class="row" ng-controller="uploadSearchController">
             <div class="col-md-12">
                 <label>From Date</label>
@@ -30,13 +33,14 @@
                     </span>
                 </p>
             </div>
+            <br />
+            <div class="vm-text-center">
+                <button type="reset" id="btnReset" class="btn btn-default">Reset</button>
+                &nbsp;
+                <button type="submit" id="btnSubmit" class="btn btn-primary" ng-click="SearchClicked()">Search</button>
+            </div>
         </div>
-        <br />
-        <div class="vm-text-center">
-            <button type="reset" id="btnReset" class="btn btn-default">Reset</button>
-            &nbsp;
-            <button type="submit" id="btnSubmit" class="btn btn-primary" ng-click="SearchClicked()">Search</button>
-        </div>
+       
 
     </form>
 </div>
