@@ -1,5 +1,5 @@
 <vm-title title-value="Search" style-value="info alert-info"></vm-title>
-<div class="well" ng-controller="uploadSearchController">
+<div class="well">
     <form>
         <div class="row">
             <div class="col-md-12" ng-controller="masterDataController">
@@ -8,7 +8,7 @@
             </div>
         </div>
         <br />
-        <div class="row">
+        <div class="row" ng-controller="uploadSearchController">
             <div class="col-md-12">
                 <label>From Date</label>
                 <p class="input-group">
@@ -20,7 +20,7 @@
             </div>
         </div>
         <br />
-        <div class="row">
+        <div class="row" ng-controller="uploadSearchController">
             <div class="col-md-12">
                 <label>To Date</label>
                 <p class="input-group">

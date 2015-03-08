@@ -1,52 +1,56 @@
 ﻿
 * {
     -webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
-	outline: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
 }
 
-   
+
 
 .login-form {
-	margin-top: 60px;
+    margin-top: 60px;
 }
 
 form[role=login] {
-	color: #5d5d5d;
-	background: #f2f2f2;
-	padding: 26px;
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
+    color: #5d5d5d;
+    background: #f2f2f2;
+    padding: 26px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
 }
-	form[role=login] img {
-		display: block;
-		margin: 0 auto;
-		margin-bottom: 35px;
-	}
-	form[role=login] input,
-	form[role=login] button {
-		font-size: 18px;
-		margin: 16px 0;
-	}
-	form[role=login] > div {
-		text-align: center;
-	}
-	
-.form-links {
-	text-align: center;
-	margin-top: 1em;
-	margin-bottom: 50px;
-}
-	.form-links a {
-		color: #fff;
-	}
 
-    /*Holder Styles for rounded*/
+    form[role=login] img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 35px;
+    }
+
+    form[role=login] input,
+    form[role=login] button {
+        font-size: 18px;
+        margin: 16px 0;
+    }
+
+    form[role=login] > div {
+        text-align: center;
+    }
+
+.form-links {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 50px;
+}
+
+    .form-links a {
+        color: #fff;
+    }
+
+/*Holder Styles for rounded*/
 .vm-holder img {
-display: inline-block;
-border-radius: 50%;
+    display: inline-block;
+    border-radius: 50%;
 }
 
 .vm-badge-for-menu {
@@ -54,12 +58,30 @@ border-radius: 50%;
     top: 6px;
     right: -5px;
 }
-.vm-bg-transparent{background-color: transparent;}
-.vm-red{color: red;}
-.vm-text-center{text-align:center;}
-th.vm-text-th-center{text-align:center;}
-td .vm-text-td-center{text-align:center;}
-.vm-datatable{padding-left:20px;}
+
+.vm-bg-transparent {
+    background-color: transparent;
+}
+
+.vm-red {
+    color: red;
+}
+
+.vm-text-center {
+    text-align: center;
+}
+
+th.vm-text-th-center {
+    text-align: center;
+}
+
+td .vm-text-td-center {
+    text-align: center;
+}
+
+.vm-datatable {
+    padding-left: 20px;
+}
 
 /*bs callout (start)*/
 .bs-callout {
@@ -70,53 +92,121 @@ td .vm-text-td-center{text-align:center;}
     border-radius: 3px;
 }
 
-.bs-callout h4 {
-    margin: 0;
-}
+    .bs-callout h4 {
+        margin: 0;
+    }
 
-.bs-callout p:last-child {
-    margin-bottom: 0;
-}
+    .bs-callout p:last-child {
+        margin-bottom: 0;
+    }
 
-.bs-callout code {
-    border-radius: 3px;
-}
+    .bs-callout code {
+        border-radius: 3px;
+    }
 
-.bs-callout+.bs-callout {
-    margin-top: -5px;
-}
+    .bs-callout + .bs-callout {
+        margin-top: -5px;
+    }
 
 .bs-callout-danger {
     border-left-color: #ce4844;
 }
 
-.bs-callout-danger h4 {
-    color: #ce4844;
-}
+    .bs-callout-danger h4 {
+        color: #ce4844;
+    }
 
 .bs-callout-warning {
     border-left-color: #aa6708;
 }
 
-.bs-callout-warning h4 {
-    color: #aa6708;
-}
+    .bs-callout-warning h4 {
+        color: #aa6708;
+    }
 
 .bs-callout-info {
     border-left-color: #1b809e;
 }
 
-.bs-callout-info h4 {
-    color: #1b809e;
-}
+    .bs-callout-info h4 {
+        color: #1b809e;
+    }
 /*bs callout (end)*/
 /*bs select2 override (start)*/
 .select2-choices {
-  min-height: 150px;
-  max-height: 150px;
-  overflow-y: auto;
+    min-height: 150px;
+    max-height: 150px;
+    overflow-y: auto;
 }
-.bigdrop .select2-container .select2-results {max-height: 500px;}
-.bigdrop .select2-results {max-height: 500px;}
-.bigdrop .select2-choices {min-height: 250px; max-height: 500px; overflow-y: auto;}
+
+.bigdrop .select2-container .select2-results {
+    max-height: 500px;
+}
+
+.bigdrop .select2-results {
+    max-height: 500px;
+}
+
+.bigdrop .select2-choices {
+    min-height: 250px;
+    max-height: 500px;
+    overflow-y: auto;
+}
 /*bs select2 override (end)*/
+
+/*vm marketing (start)*/
+.vm-mkt-round {
+    color: #FFFFFF;
+}
+
+.marketing-benefits .octicon-checklist {
+    text-align: center;
+}
+
+.marketing-benefits .mega-octicon {
+    font-size: 48px;
+    line-height: 100px;
+}
+
+.marketing-benefits p {
+    text-align: center;
+    color: #ffffff;
+}
+
+.marketing-benefits {
+    text-align: center;
+}
+
+.teaser-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    color: #4183c4;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    border-radius: 50px;
+    border-width: 5px;
+}
+
+.mega-octicon {
+    font: normal normal 32px octicons;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.octicon-checklist:before {
+    content: '\f076';
+}
+/*vm marketing (end)*/
+.background-image-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url(http://stephenmuscat.com/twilli_air/1.2.3/assets/images/theme_images/background-image-overlay.png) repeat;
+}

@@ -26,8 +26,8 @@ reachApp.controller('uploadSearchController', function ($scope,$rootScope) {
         startingDay: 1
     };
 
-    $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-    $scope.format = $scope.formats[0];
+    $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate', 'dd-MMM-yyyy'];
+    $scope.format = $scope.formats[4];
 
 
 
